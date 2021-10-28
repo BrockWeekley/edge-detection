@@ -124,6 +124,7 @@ if __name__ == "__main__":
         input_img = cv.imread(cv.samples.findFile(file_input), 0)
     else:
         input_img = cv.imread(cv.samples.findFile(file_input))
+    cv.namedWindow('Original', cv.WINDOW_NORMAL)
     cv.imshow("Original", input_img)
 
     sobel_filter = np.array([[.25, 0, -.25],
