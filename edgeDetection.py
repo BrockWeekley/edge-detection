@@ -89,8 +89,7 @@ def edge_detection(image, input_filter):
         orientation = np.where(orientation < 0, 360 + orientation, orientation)
         (fig, axs) = plt.subplots(nrows=1, ncols=3, figsize=(8, 4))
         # Average 10 pixels
-        orientation_by_ten = orientation[0::10,::10]
-        print(orientation_by_ten)
+        orientation_by_ten = orientation[0::10, ::10]
         X, Y = np.meshgrid(np.arange(orientation_by_ten.shape[1]), np.arange(orientation_by_ten.shape[0]))
 
     magnitude = (magnitude) / (255 * np.sqrt(2)) * 255
